@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# User Registration Script
+
+# Collect user information
+echo "Enter your name:"
+read name
+
+echo "Enter your age:"
+read age
+
+# Check if the user is eligible to register
+if [ $age -ge 18 ]; then
+    echo "Welcome, $name! You are eligible to register."
+else
+    echo "Sorry, $name. You must be at least 18 years old to register."
+    exit 1
+fi
+
+# Simulate account creation
+echo "Creating your account..."
+sleep 2  # Simulating a delay for account creation
+echo "Account for $name created successfully!"
+
+# Example of a loop to show registration steps
+echo "Registration Steps:"
+for step in "Fill out personal details" "Choose a username" "Set a password" "Confirm your registration"; do
+    echo "- $step"
+done
+
+echo "Thank you for registering, $name!"
